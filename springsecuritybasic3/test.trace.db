@@ -1,0 +1,18 @@
+2024-07-12 20:22:27.378636+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE [*]database easybank"; expected "OR REPLACE, FORCE, VIEW, MATERIALIZED, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMPORARY, TABLE, SYNONYM, UNIQUE, SPATIAL, INDEX"; SQL statement:
+CREATE database easybank [42001-224]
+2024-07-12 20:24:19.868774+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT [*]IGNORE INTO `users` VALUES (NULL, 'happy', '12345', '1')"; expected "INTO"; SQL statement:
+INSERT IGNORE INTO `users` VALUES (NULL, 'happy', '12345', '1') [42001-224]
+2024-07-12 20:24:19.872301+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT [*]IGNORE INTO `authorities` VALUES (NULL, 'happy', 'write')"; expected "INTO"; SQL statement:
+INSERT IGNORE INTO `authorities` VALUES (NULL, 'happy', 'write') [42001-224]
+2024-07-12 20:24:25.125035+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT [*]IGNORE INTO `users` VALUES (NULL, 'happy', '12345', '1')"; expected "INTO"; SQL statement:
+INSERT IGNORE INTO `users` VALUES (NULL, 'happy', '12345', '1') [42001-224]
+2024-07-12 20:25:38.726792+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT [*]IGNORE INTO `users` (`username`, `password`, `enabled`) VALUES ('happy', '12345', '1')"; expected "INTO"; SQL statement:
+INSERT IGNORE INTO `users` (`username`, `password`, `enabled`) VALUES ('happy', '12345', '1') [42001-224]
+2024-07-12 20:26:59.596281+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT [*]IGNORE INTO `users` (username, password, enabled) VALUES ('happy', '12345', '1')"; expected "INTO"; SQL statement:
+INSERT IGNORE INTO `users` (username, password, enabled) VALUES ('happy', '12345', '1') [42001-224]
