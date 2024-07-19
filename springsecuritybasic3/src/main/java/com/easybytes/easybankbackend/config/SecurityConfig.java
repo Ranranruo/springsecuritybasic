@@ -27,7 +27,7 @@ public class SecurityConfig {
                 authorize
                         .requestMatchers("/myAccount", "/myBalance", "/myLoans", "/myCards")
                         .authenticated()
-                        .requestMatchers("/notices", "/contact")
+                        .requestMatchers("/notices", "/contact", "/register")
                         .permitAll()
                         .requestMatchers("/h2-console/**")
                         .permitAll()
@@ -46,10 +46,10 @@ public class SecurityConfig {
         return web -> web.ignoring()
                 .requestMatchers(PathRequest.toH2Console());
     }
-    @Bean
-    public UserDetailsService userDetailsService(DataSource dataSource) {
-        return new JdbcUserDetailsManager(dataSource);
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService(DataSource dataSource) {
+//        return new JdbcUserDetailsManager(dataSource);
+//    }
 //    @Bean
 //    public InMemoryUserDetailsManager userDetailsServices(){
 //        UserDetails admin = User.withDefaultPasswordEncoder()

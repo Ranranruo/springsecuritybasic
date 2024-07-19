@@ -16,3 +16,6 @@ INSERT IGNORE INTO `users` (`username`, `password`, `enabled`) VALUES ('happy', 
 2024-07-12 20:26:59.596281+09:00 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT [*]IGNORE INTO `users` (username, password, enabled) VALUES ('happy', '12345', '1')"; expected "INTO"; SQL statement:
 INSERT IGNORE INTO `users` (username, password, enabled) VALUES ('happy', '12345', '1') [42001-224]
+2024-07-19 18:34:14.635282+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `customer`([*]"; expected "identifier"; SQL statement:
+CREATE TABLE `customer`( [42001-224]
