@@ -1,0 +1,478 @@
+2024-07-12 20:22:27.378636+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE [*]database easybank"; expected "OR REPLACE, FORCE, VIEW, MATERIALIZED, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMPORARY, TABLE, SYNONYM, UNIQUE, SPATIAL, INDEX"; SQL statement:
+CREATE database easybank [42001-224]
+2024-07-12 20:24:19.868774+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT [*]IGNORE INTO `users` VALUES (NULL, 'happy', '12345', '1')"; expected "INTO"; SQL statement:
+INSERT IGNORE INTO `users` VALUES (NULL, 'happy', '12345', '1') [42001-224]
+2024-07-12 20:24:19.872301+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT [*]IGNORE INTO `authorities` VALUES (NULL, 'happy', 'write')"; expected "INTO"; SQL statement:
+INSERT IGNORE INTO `authorities` VALUES (NULL, 'happy', 'write') [42001-224]
+2024-07-12 20:24:25.125035+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT [*]IGNORE INTO `users` VALUES (NULL, 'happy', '12345', '1')"; expected "INTO"; SQL statement:
+INSERT IGNORE INTO `users` VALUES (NULL, 'happy', '12345', '1') [42001-224]
+2024-07-12 20:25:38.726792+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT [*]IGNORE INTO `users` (`username`, `password`, `enabled`) VALUES ('happy', '12345', '1')"; expected "INTO"; SQL statement:
+INSERT IGNORE INTO `users` (`username`, `password`, `enabled`) VALUES ('happy', '12345', '1') [42001-224]
+2024-07-12 20:26:59.596281+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT [*]IGNORE INTO `users` (username, password, enabled) VALUES ('happy', '12345', '1')"; expected "INTO"; SQL statement:
+INSERT IGNORE INTO `users` (username, password, enabled) VALUES ('happy', '12345', '1') [42001-224]
+2024-07-19 18:34:14.635282+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `customer`([*]"; expected "identifier"; SQL statement:
+CREATE TABLE `customer`( [42001-224]
+2024-08-13 18:39:35.734494+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]SCUSTOMER ELECT * FROM USERS"; expected "SAVEPOINT, SCRIPT, SHUTDOWN"; SQL statement:
+SCUSTOMER ELECT * FROM USERS [42001-224]
+2024-08-14 16:37:50.885708+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create [*]database eazybank"; expected "OR REPLACE, FORCE, VIEW, MATERIALIZED, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMPORARY, TABLE, SYNONYM, UNIQUE, SPATIAL, INDEX"; SQL statement:
+create database eazybank [42001-224]
+2024-08-14 16:38:18.312284+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]users"; expected "UPDATE"; SQL statement:
+users [42001-224]
+2024-08-14 17:09:32.997876+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a   `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+   `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:09:51.212241+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CUSTOMER" not found (this database is empty); SQL statement:
+INSERT INTO `customer` (`name`,`email`,`mobile_number`, `pwd`, `role`,`create_dt`)
+ VALUES ('Happy','happy@example.com','9876548337', '$2y$12$oRRbkNfwuR8ug4MlzH5FOeui.//1mkd.RsOAJMbykTSupVy.x/vb2', 'admin',CURDATE()) [42104-224]
+2024-08-14 17:10:23.628520+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a   `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+   `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:11:17.090386+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:11:48.794961+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:11:49.358275+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:11:49.527955+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:13:01.620961+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:13:04.780414+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:13:05.107796+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:13:05.322532+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:13:05.499591+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:13:05.666524+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:13:05.827301+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:13:05.986893+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:13:08.971684+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:13:09.200907+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:13:09.338204+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:11.884761+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:13.620313+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:14.154794+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:46.027707+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:46.730817+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:47.002736+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:47.203399+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:47.402706+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:47.594388+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:47.722757+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:54.212695+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:54.394706+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:54.562724+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:54.715295+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:14:54.850721+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:15:36.684320+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a  `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+  `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 17:30:19.179126+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a   `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+   `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 18:01:07.198738+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a   `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+   `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 18:01:11.809732+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a   `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+   `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
+2024-08-14 18:01:12.168298+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE `accounts` (\000d\000a  `customer_id` int NOT NULL,\000d\000a   `account_number` int NOT NULL,\000d\000a  `account_type` varchar(100) NOT NULL,\000d\000a  `branch_address` varchar(200) NOT NULL,\000d\000a  `create_dt` date DEFAULT NULL,\000d\000a  PRIMARY KEY (`account_number`),\000d\000a  [*]KEY `customer_id` (`customer_id`),\000d\000a  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE `accounts` (
+  `customer_id` int NOT NULL,
+   `account_number` int NOT NULL,
+  `account_type` varchar(100) NOT NULL,
+  `branch_address` varchar(200) NOT NULL,
+  `create_dt` date DEFAULT NULL,
+  PRIMARY KEY (`account_number`),
+  KEY `customer_id` (`customer_id`),
+  CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) [42001-224]
