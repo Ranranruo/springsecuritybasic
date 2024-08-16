@@ -1,6 +1,5 @@
 package com.easybytes.easybankbackend.config;
 
-import com.easybytes.easybankbackend.model.Customer;
 import com.easybytes.easybankbackend.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;

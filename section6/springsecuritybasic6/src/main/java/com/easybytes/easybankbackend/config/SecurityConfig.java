@@ -26,14 +26,9 @@ public class SecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.authorizeHttpRequests((authorize)->
                 authorize
-                        .requestMatchers("/myAccount", "/myBalance", "/myLoans", "/myCards")
-                        .authenticated()
-                        .requestMatchers("/notices", "/contact", "/register")
-                        .permitAll()
-                        .requestMatchers("/h2-console/**")
-                        .permitAll()
-                        .anyRequest()
-                        .permitAll()
+                        .requestMatchers("/myAccount", "/myBalance", "/myLoans", "/myCards", "/user").authenticated()
+                        .requestMatchers("/notices", "/contact", "/register").permitAll()
+                        .requestMatchers("/h2-console/**").permitAll()
 //                        .authenticated()
         );
         http.csrf((csrf)-> csrf.disable());
